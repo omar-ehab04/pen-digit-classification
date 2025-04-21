@@ -4,61 +4,56 @@ https://nbviewer.org/github/omar-ehab04/pen-digit-classification/blob/main/pin_d
 
 for full view
 
+🎯 Project Title: Pen Digits Recognition using Machine Learning
 
-🚀 Digit Classification Project: Pen-Based Handwritten Digits using Machine Learning 🤖✍️
+I'm excited to share my machine learning project where I tackled the classic problem of handwritten digit recognition using the Pen Digits dataset. The objective was to develop a model that could accurately classify digits (0–9) based on sequences of 2D pen coordinates—without relying on images!
 
-Thrilled to share a recent machine learning project I completed where I built an end-to-end digit classification system using the Pen-Based Recognition of Handwritten Digits dataset . This project dives into supervised classification, dimensionality reduction, model evaluation, and insightful visualizations! 📉📈
+🚀 Project Highlights:
 
-🔍 Project Objective
-To classify digits (0–9) based on (x, y) pen stroke coordinates collected from digit writing samples. Each instance in the dataset contains 64 features representing sequential pen points, followed by a class label (the digit).
+🔍 Data Exploration & Preparation
 
-🛠️ Workflow Summary
-📦 Data Preprocessing
-Loaded dataset using pandas.
+Loaded and preprocessed the Pen Digits dataset
 
-Checked for and confirmed no null values.
+Conducted in-depth Exploratory Data Analysis (EDA) using scatterplots and heatmaps to understand data distribution and variable correlations
 
-Verified balanced class distribution — each digit had around 378 samples.
+🧠 Model Selection & Training
 
-Split the data into training (80%) and testing (20%) using stratified sampling to preserve class balance.
+Evaluated several classification algorithms including:
+✅ Decision Trees
+✅ Random Forest (Baseline & Tuned)
+✅ Gradient Boosting
+✅ XGBoost
+✅ Bagging (with SVM & Decision Trees)
 
-📊 Exploratory Data Analysis
-Created a Seaborn count plot to visualize digit distribution — all classes were well-represented.
+Fine-tuned hyperparameters using GridSearchCV for optimal performance
 
-Applied Principal Component Analysis (PCA) to reduce dimensionality to 2D.
+📊 Model Evaluation
+Compared performance using accuracy, precision, recall, and F1-score.
+✅ Highlights:
 
-Visualized the PCA output: clear separation between digit clusters ➡️ a strong hint that the data is highly learnable with linear/non-linear models.
+Decision Tree: ~86% accuracy
 
-🌲 Model Training: Random Forest Classifier
-Used Scikit-learn’s RandomForestClassifier with:
+Pruned Decision Tree: ~87%
 
-n_estimators=100
+Gradient Boosting & XGBoost: ~97%
 
-Default settings for depth, leaf size, etc.
+Random Forest: ~97%
 
-Model trained efficiently with minimal tuning due to the balanced nature and structure of the dataset.
+Bagging with Decision Trees: ~96%
 
-📈 Evaluation Results
-Achieved an outstanding accuracy of 95.69% on the test set! ✅
+Bagging with SVM: 💥 99% accuracy — Top performer!
+🔬 Feature Engineering & Optimization
 
-Classification Report Highlights:
+Applied PCA, Chi-Square, and Fisher Score to reduce dimensionality
 
-Precision: Ranged from 0.93 to 0.99 per class
+Observed a slight performance improvement with PCA, especially in model efficiency
 
-Recall: Mostly 0.94–0.98, indicating the model captured true positives well
+🧰 Tech Stack:
+Python | Scikit-learn | Pandas | NumPy | Seaborn | Matplotlib | XGBoost
 
-F1-Score: Averaged around 0.95+ for most digits
+📌 Conclusion:
+This project was a fantastic opportunity to work through a full ML pipeline — from EDA to model comparison and tuning. It reinforced the value of ensemble methods and feature engineering, with SVM Bagging proving to be the most powerful approach in this case.
 
-Model performance was consistent across all digits — no significant bias toward any class.
+📬 Happy to connect with others working on ML, computer vision, or educational AI tools.
 
-🧊 Confusion Matrix Insights
-Generated a heatmap using Seaborn — most predictions fell along the diagonal (true positives).
-
-Minimal misclassifications, with a few close-digit confusions (e.g., 3 vs. 8) that are expected in handwritten data.
-
-🎨 Visualizations
-PCA Plot: Highlighted the power of feature reduction and showed distinct digit groupings.
-
-Count Plot: Ensured no class imbalance that could skew training.
-
-Confusion Matrix Heatmap: Gave a granular look at model accuracy per class.
+#MachineLearning #DataScience #Python #HandwrittenDigitRecognition #PenDigits #ModelTuning #PCA #FeatureSelection #XGBoost #ScikitLearn #EnsembleLearning #DataVisualization #AIProjects
